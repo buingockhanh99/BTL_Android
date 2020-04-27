@@ -17,9 +17,6 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.hktstudio.thibanglaixe.Adapter.AdapterRecyclerViewThiSatHach;
 import com.hktstudio.thibanglaixe.DAO.CauHoiDAO;
 import com.hktstudio.thibanglaixe.Object.CauHoi;
@@ -42,7 +39,7 @@ public class ThiSatHachActivity extends AppCompatActivity implements View.OnClic
     int dem = 1;
     Button bt_truoc, bt_sau,bt_huyBo, bt_dongY,bt_cancel;
     CauHoiDAO cauHoiDAO;
-    Dialog dialogThiSatHach;
+    Dialog dialogDanhsach;
     public static List<CauHoi> list;
     List<CauHoi> listCauHoi = new ArrayList<CauHoi>();
     RecyclerView rcv_thiSatHach;
@@ -62,6 +59,12 @@ public class ThiSatHachActivity extends AppCompatActivity implements View.OnClic
     TextView tv_time;
     Thread t;
     int FLAG=0;
+
+    private boolean isDialogNotification = false;
+    private boolean isDialogConfirm = false;
+    private boolean isDialogListQuestion = false;
+    private boolean isDialogTimeUp = false;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,10 +153,10 @@ public class ThiSatHachActivity extends AppCompatActivity implements View.OnClic
         dialogHetGio.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialogHetGio.setCanceledOnTouchOutside(false);
 
-        dialogThiSatHach = new Dialog(this);
-        dialogThiSatHach.setContentView(R.layout.dialog_list_question);
-        dialogThiSatHach.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialogThiSatHach.setCanceledOnTouchOutside(true);
+        dialogDanhsach = new Dialog(this);
+        dialogDanhsach.setContentView(R.layout.dialog_list_question);
+        dialogDanhsach.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialogDanhsach.setCanceledOnTouchOutside(true);
 
         bt_huyBo = dialogFinish.findViewById(R.id.bt_huyBo);
         bt_dongY = dialogFinish.findViewById(R.id.bt_dongY);
@@ -199,7 +202,7 @@ public class ThiSatHachActivity extends AppCompatActivity implements View.OnClic
         switch (view.getId()) {
             case R.id.btnMenu:
 
-                dialogFinish.show();
+                dialogDanhsach.show();
 
                 break;
             case R.id.bt_truoc:
@@ -304,8 +307,6 @@ public class ThiSatHachActivity extends AppCompatActivity implements View.OnClic
             }
         }
     }
-
-
 
 }
 

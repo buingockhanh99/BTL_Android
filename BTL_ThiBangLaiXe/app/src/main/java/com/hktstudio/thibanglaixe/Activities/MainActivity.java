@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //SHOWSLIDE
     CarouselView carouselView;
     private int[] image = new int[]{
-            R.drawable.anh1, R.drawable.anh2, R.drawable.anh3, R.drawable.love2, R.drawable.love3
+            R.drawable.slide1, R.drawable.slide2, R.drawable.slide3, R.drawable.slide4, R.drawable.slide1
     };
     private String[] imageTile = new String[]{
             "Thi sát hạch", "Học Luật", "Mẹo Thi","Học lý thuyết","Học Biển Báo"

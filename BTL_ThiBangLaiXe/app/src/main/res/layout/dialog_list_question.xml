@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="328dp"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="36dp"
+    android:layout_marginBottom="36dp">
+    <TextView
+        android:id="@+id/dlListQ_Title"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        tools:text="Phiếu trả lời trắc nghiệm"
+
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+    <LinearLayout
+        android:visibility="gone"
+
+        android:gravity="center"
+        android:id="@+id/layoutResult"
+        android:layout_below="@+id/dlListQ_Title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/resultTrue"
+                    android:gravity="end"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginEnd="33dp"
+                    tools:text="30"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/resultFalse"
+                    android:gravity="end"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginEnd="33dp"
+                    tools:text="9"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/resultUnChoice"
+                    android:gravity="end"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginEnd="33dp"
+                    tools:text="1"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/resultScore"
+            android:gravity="center"
+            tools:text="7.5"
+            android:textSize="38sp"
+
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+
+        android:layout_below="@id/layoutResult"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <GridView
+        android:id="@+id/dlListQ_GridItem"
+
+        android:numColumns="2"
+        android:layout_above="@id/dialogBottom"
+        android:layout_below="@id/layoutResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/dialogBottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:id="@+id/btnDlListQ_EndQuiz"
+
+            android:textAllCaps="false"
+
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Trở lại"/>
+        <Button
+            android:id="@+id/btnDlListQ_Return"
+
+            android:textAllCaps="false"
+
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Tiếp theo" />
+    </LinearLayout>
+</RelativeLayout>

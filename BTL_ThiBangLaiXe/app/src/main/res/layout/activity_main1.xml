@@ -1,0 +1,358 @@
+<FrameLayout xmlns:ads2="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#26e83d"
+            android:popupTheme="@style/AppTheme"
+            ads:theme="@style/ToolbarColoredBackArrow">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ôn thi giấy phép lái xe"
+                android:textColor="#000"
+                android:textSize="@dimen/_17ssp" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:orientation="vertical">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carourel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ads:fillColor="#FFFFFF"
+                ads:pageColor="#FFFFFF"
+                ads:radius="6dp"
+                ads:slideInterval="5000"
+                ads:strokeColor="#FFFFFF"
+                ads:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="497dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/bt_thiSatHach"
+                        android:layout_width="match_parent"
+                        android:layout_height="164dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/thisathach2" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Thi sát hạch"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ced5d5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bt_lyThuyet"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                      >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/lythuyet1" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Lý thuyết"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ced5d5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bt_meoThucHanh"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/meothuchanh1" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Mẹo thực hành"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ced5d5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/bt_bienBao"
+                        android:layout_width="match_parent"
+                        android:layout_height="164dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/bienbao1" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Biển báo"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ced5d5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bt_meoGhiNho"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                      >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/meoghinho1" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Mẹo ghi nhớ"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ced5d5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bt_lichSuBaiThi"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                       >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="111dp"
+                                android:layout_height="111dp"
+                                android:clickable="false"
+                                android:src="@drawable/lichsu1" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:gravity="top|center"
+                            android:text="Lịch sử bài thi"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                >
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
